@@ -74,12 +74,12 @@
     },
     {
       "id": "t-audit-final",
-      "title": "Rerun the authoritative all-branch audit",
+      "title": "The all-branch audit is clean",
       "project": "hermes-agent",
-      "status": "active",
+      "status": "done",
       "priority": "high",
       "due": "",
-      "notes": "The API auditor pages through every commit of every branch and was still running after 20 minutes with 34 of 68 repositories done. A fast auditor now does the same work in one local pass per repository - 12 seconds for the 173-branch repository against 884 - with the API kept for the proof, the per-repository control and the positive control."
+      "notes": "The whole account: 68 repositories, 352 branches, zero unlinked local identities, zero errors. The API auditor pages through every commit of every branch and could not finish - it was still running after 20 minutes with 34 of 68 done. A fast auditor now does the same work in one local pass per repository, 12 seconds for the 173-branch repository against 884, with the API kept for the proof, a per-repository control and a positive control. A planted offender is scanned first, so a clean result means something."
     },
     {
       "id": "t-krysys-history",
