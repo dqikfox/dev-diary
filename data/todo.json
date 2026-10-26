@@ -29,21 +29,21 @@
     },
     {
       "id": "t-1p-rate",
-      "title": "Let the 1Password CLI rate limit clear",
+      "title": "The 1Password CLI rate limit cleared",
       "project": "hermes-agent",
-      "status": "open",
+      "status": "done",
       "priority": "normal",
       "due": "",
-      "notes": "The CLI is rate limited, so the DPAPI cache cannot be refreshed from the vault. The cached values still serve."
+      "notes": "The CLI was rate limited, so the vault could not be refreshed. It cleared: a new item 'OpenAI Platform Key - Codex project' was created and read back with --reveal, and the older 'OpenAI Project Key' was left untouched."
     },
     {
       "id": "t-heretik-mcp",
       "title": "Fix the HERETIK MCP route",
       "project": "heretik",
-      "status": "open",
+      "status": "done",
       "priority": "normal",
       "due": "",
-      "notes": "http://127.0.0.1:8080/mcp answers 404 while the health service is up. It injects a fatal-looking error into every Codex handshake."
+      "notes": "HERETIK was never an MCP server - /mcp 404s while /health is fine. The dead reference was an [mcp_servers.unityMCP] HTTP entry in C:/Users/KING/.codex/config.toml pointing at HERETIK's 8080. Removed after a backup; the working Unity stdio relay was kept. ChatGPT recovered in the same pass and served an exact token."
     },
     {
       "id": "t-tess-venv",
@@ -61,25 +61,25 @@
       "status": "active",
       "priority": "low",
       "due": "2026-10-27",
-      "notes": "The Plus worker quota reports 'try again at Oct 27th'. The integration itself is proven - it served nonces, wrote code and completed a file task."
+      "notes": "The Plus worker quota is a rolling cap, and a 429 is now classified as 'blocked' rather than 'failed'. The integration itself is proven - it served exact nonces, wrote 386 bytes of working code and completed a real file task in 34.6s."
     },
     {
       "id": "t-faraday-publish",
       "title": "Publish the faraday identity rewrite",
       "project": "faraday",
-      "status": "active",
+      "status": "done",
       "priority": "high",
       "due": "",
-      "notes": "reality-engine carries 85 local-identity commits. The rewrite is correct and the history-preserving rewriter is proven; the publish is in flight."
+      "notes": "reality-engine carried 85 local-identity commits. Rewritten with the history-preserving rewriter and published: 85/85 now read as dqikfox, 15 third-party commits preserved, and main was left untouched at 94 third-party commits. A bug in the publisher - a remote ref table read after it was needed - was found and fixed on the way."
     },
     {
       "id": "t-audit-final",
       "title": "Rerun the authoritative all-branch audit",
       "project": "hermes-agent",
-      "status": "open",
+      "status": "active",
       "priority": "high",
       "due": "",
-      "notes": "Must wait for faraday to land. The audit self-test also needs a stable controlled offender now that QHYSICS has been fixed."
+      "notes": "The API auditor pages through every commit of every branch and was still running after 20 minutes with 34 of 68 repositories done. A fast auditor now does the same work in one local pass per repository - 12 seconds for the 173-branch repository against 884 - with the API kept for the proof, the per-repository control and the positive control."
     },
     {
       "id": "t-krysys-history",
@@ -107,6 +107,33 @@
       "priority": "normal",
       "due": "",
       "notes": "The house must stay green. 262 passed, 2 skipped, 0 failed, and the gate at 100.0/100 across 37 checks."
+    },
+    {
+      "id": "t-openai-vault",
+      "title": "Store the OpenAI Platform key in the vault",
+      "project": "hermes-agent",
+      "status": "done",
+      "priority": "normal",
+      "due": "",
+      "notes": "The key authenticates - GET /v1/models returns 200 - but the project has no credit, so a completion returns 429 credit_balance_exhausted. A valid credential that cannot pay is blocked, not failed. It is now an item in 1Password with the verdict in the note; the old 'OpenAI Project Key' was not overwritten."
+    },
+    {
+      "id": "t-gold-atlas",
+      "title": "Publish the GOLD AU Evidence Atlas on a stable public URL",
+      "project": "gold-atlas",
+      "status": "done",
+      "priority": "high",
+      "due": "",
+      "notes": "Served on 8767 because 8766 belongs to QMS, and QMS answers 200 as well - so the probe is body-aware. The stable URL is the Tailscale Funnel at https://throne-1.tail886dbb.ts.net/, with a quick tunnel as a secondary. The launcher proves the public body against the local body before it exits. /health answers JSON so the estate gate can read it."
+    },
+    {
+      "id": "t-8080-collision",
+      "title": "Resolve the 8080 Cradle/HERETIK port collision",
+      "project": "heretik",
+      "status": "open",
+      "priority": "normal",
+      "due": "",
+      "notes": "The invalid Codex reference to 8080 is gone, but the underlying ownership overlap between Cradle and HERETIK is still open. PORT_MAP records it as resolved-for-mcp for Codex only."
     }
   ]
 }

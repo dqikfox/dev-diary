@@ -41,6 +41,12 @@
           "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_devdiary.cmd",
           "machine": "THRONE",
           "note": "Health is /api/health with the marker 'devdiary'."
+        },
+        {
+          "name": "GOLD ATLAS",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_goldatlas.cmd",
+          "machine": "THRONE",
+          "note": "The atlas serves ITSELF on 8767; 8766 belongs to QMS and QMS answers 200 as well, so the probe is body-aware. /health answers JSON with the marker 'Evidence Atlas'. The launcher proves the public body against the local body before it exits."
         }
       ]
     },
@@ -75,6 +81,12 @@
           "name": "Branch audit progress",
           "path": "C:/Users/KING/AppData/Local/hermes/state/branch_audit.json",
           "machine": "THRONE"
+        },
+        {
+          "name": "Fast branch audit progress",
+          "path": "C:/Users/KING/AppData/Local/hermes/state/branch_audit_fast.json",
+          "machine": "THRONE",
+          "note": "The local-pass auditor. It writes its own file, so it can never clobber the API auditor's progress."
         }
       ]
     },
