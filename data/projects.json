@@ -464,7 +464,7 @@
       "id": "alchemy",
       "name": "THE ALCHEMY STUDY",
       "category": "study",
-      "role": "The corpus and the study log: Philalèthe, Ripley, Starkey, Zosimos.",
+      "role": "The corpus and the study log: Philal\u00e8the, Ripley, Starkey, Zosimos.",
       "machines": [
         "THRONE"
       ],
@@ -507,7 +507,8 @@
         "port": 8767,
         "health": "http://127.0.0.1:8767/app/"
       },
-      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_goldatlas.cmd"
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_goldatlas.cmd",
+      "health": "http://127.0.0.1:8767/health"
     }
   ]
 }
