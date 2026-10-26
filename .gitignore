@@ -1,0 +1,11 @@
+# The pointer document is never committed. It names every credential the
+# estate uses; it must not be in a public repository.
+secure details.md
+
+# Runtime state and caches
+__pycache__/
+*.pyc
+*.tmp
+data/notes/*.tmp
+logs/
+*.log

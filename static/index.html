@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV DIARY — THRONE</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- ============================ the first-open menu ============================ -->
+<section id="menu" class="menu">
+  <header class="menu-head">
+    <div class="menu-mark">DD</div>
+    <div>
+      <h1>DEV DIARY</h1>
+      <p class="menu-sub">Jamie Hitch &middot; THRONE &middot; the whole estate in one place</p>
+    </div>
+    <div class="menu-clock"><span id="clock">--:--</span><small id="today">--</small></div>
+  </header>
+
+  <div class="menu-grid">
+    <button class="mcard" data-panel="todo">
+      <span class="mnum">01</span>
+      <h2>TODO</h2>
+      <p>What is still open, what is blocked, and what is due next.</p>
+      <span class="mcount" id="c-todo">—</span>
+    </button>
+    <button class="mcard" data-panel="diary">
+      <span class="mnum">02</span>
+      <h2>DIARY</h2>
+      <p>Notes, daily reports, and the written record of the work.</p>
+      <span class="mcount" id="c-diary">—</span>
+    </button>
+    <button class="mcard" data-panel="calendar">
+      <span class="mnum">03</span>
+      <h2>CALENDAR</h2>
+      <p>What was done each day, what remains, and every deadline.</p>
+      <span class="mcount" id="c-calendar">—</span>
+    </button>
+    <button class="mcard" data-panel="projects">
+      <span class="mnum">04</span>
+      <h2>PROJECTS</h2>
+      <p>Every project, its links, its launcher and the machine it lives on.</p>
+      <span class="mcount" id="c-projects">—</span>
+    </button>
+    <button class="mcard" data-panel="secure">
+      <span class="mnum">05</span>
+      <h2>SECURE</h2>
+      <p>The credential inventory. Values are held in 1Password, never here.</p>
+      <span class="mcount" id="c-secure">—</span>
+    </button>
+    <button class="mcard" data-panel="configs">
+      <span class="mnum">06</span>
+      <h2>CONFIGS</h2>
+      <p>Where every configuration lives and which one owns it.</p>
+      <span class="mcount" id="c-configs">—</span>
+    </button>
+    <button class="mcard" data-panel="network">
+      <span class="mnum">07</span>
+      <h2>NETWORK</h2>
+      <p>Connected devices, and this machine's own vitals.</p>
+      <span class="mcount" id="c-network">—</span>
+    </button>
+  </div>
+  <footer class="menu-foot">
+    <span id="menu-health">checking the estate…</span>
+    <span class="menu-foot-right">THRONE &middot; 100.103.71.66 &middot; local only</span>
+  </footer>
+</section>
+
+<!-- ============================ the shell ============================ -->
+<div id="shell" class="shell hidden">
+  <nav class="rail">
+    <button class="rail-menu" id="rail-menu" title="Back to the menu">☰</button>
+    <div class="rail-mark">DD</div>
+    <button class="rail-item active" data-panel="todo"><b>TODO</b></button>
+    <button class="rail-item" data-panel="diary"><b>DIARY</b></button>
+    <button class="rail-item" data-panel="calendar"><b>CALENDAR</b></button>
+    <button class="rail-item" data-panel="projects"><b>PROJECTS</b></button>
+    <button class="rail-item" data-panel="secure"><b>SECURE</b></button>
+    <button class="rail-item" data-panel="configs"><b>CONFIGS</b></button>
+    <button class="rail-item" data-panel="network"><b>NETWORK</b></button>
+    <div class="rail-foot">
+      <div class="rail-stat" id="rail-up">uptime —</div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <header class="top">
+      <div>
+        <h2 id="panel-title">TODO</h2>
+        <p id="panel-sub" class="top-sub">—</p>
+      </div>
+      <div class="top-right">
+        <span class="pill" id="top-clock">—</span>
+        <span class="pill ok" id="top-health">health —</span>
+      </div>
+    </header>
+
+    <section class="panel" id="panel-todo"></section>
+    <section class="panel hidden" id="panel-diary"></section>
+    <section class="panel hidden" id="panel-calendar"></section>
+    <section class="panel hidden" id="panel-projects"></section>
+    <section class="panel hidden" id="panel-secure"></section>
+    <section class="panel hidden" id="panel-configs"></section>
+    <section class="panel hidden" id="panel-network"></section>
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

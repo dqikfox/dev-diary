@@ -1,0 +1,79 @@
+{
+  "name": "Jamie Hitch",
+  "alias": "DFox / dqikfox",
+  "role": "Sovereign seat of THRONE — operator of the estate",
+  "motto": "No strings on me.",
+  "email": "dqikst@gmail.com",
+  "github": "https://github.com/dqikfox",
+  "machines": [
+    {
+      "name": "THRONE",
+      "role": "Sovereign seat",
+      "host": "THRONE\\KING",
+      "ip": "100.103.71.66",
+      "os": "Windows 11",
+      "gpu": "NVIDIA RTX 3090 24 GB",
+      "cpu": "Xeon W-2235",
+      "ram": "64 GB",
+      "state": "this host"
+    },
+    {
+      "name": "SHADOW",
+      "role": "Mesh peer",
+      "ip": "100.96.46.85",
+      "os": "Windows",
+      "gpu": "NVIDIA RTX A4500 20 GB",
+      "ram": "64 GB",
+      "state": "reachable"
+    },
+    {
+      "name": "MSI",
+      "role": "Mesh peer",
+      "ip": "100.83.120.56",
+      "os": "Windows",
+      "gpu": "NVIDIA RTX 3050 4 GB",
+      "ram": "64 GB",
+      "state": "offline"
+    },
+    {
+      "name": "Cyclone-C4",
+      "role": "Android device",
+      "ip": "100.71.239.65",
+      "os": "Android",
+      "state": "adb over the tailnet"
+    },
+    {
+      "name": "S23 Ultra",
+      "role": "Daily driver",
+      "ip": "100.118.95.91",
+      "os": "Android 16",
+      "state": "adopted"
+    }
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/dqikfox"
+    },
+    {
+      "label": "Lummings",
+      "url": "https://dqikfox.github.io/lummings/"
+    },
+    {
+      "label": "KRYSYS shop",
+      "url": "https://throne-1.tail886dbb.ts.net:8443"
+    },
+    {
+      "label": "TESSERACT",
+      "url": "http://127.0.0.1:8705/"
+    },
+    {
+      "label": "NEXUS",
+      "url": "http://127.0.0.1:8650/health"
+    },
+    {
+      "label": "Pixel",
+      "url": "http://127.0.0.1:8520/"
+    }
+  ]
+}

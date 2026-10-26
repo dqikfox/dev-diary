@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "id": "t-stripe-bank",
+      "title": "Connect a bank account to the Stripe account",
+      "project": "krysys-shop",
+      "status": "open",
+      "priority": "high",
+      "due": "2026-10-29",
+      "notes": "external_accounts is 0. Checkout Sessions work and can be created and cancelled, but no money can land until a bank account is connected. This is the single thing between KRYSYS and actual revenue."
+    },
+    {
+      "id": "t-gh-billing",
+      "title": "Resolve the GitHub account billing lock",
+      "project": "hermes-agent",
+      "status": "blocked",
+      "priority": "high",
+      "due": "2026-10-28",
+      "notes": "GitHub Actions reports 'your account is locked due to a billing issue'. It is account-wide, not repository-wide. Until it clears, no workflow can be trusted as a gate."
+    },
+    {
+      "id": "t-elevenlabs",
+      "title": "Replace the revoked ElevenLabs API key",
+      "project": "hermes-agent",
+      "status": "open",
+      "priority": "high",
+      "due": "2026-10-30",
+      "notes": "The key in 1Password returns 401. The account and the 44 voices are intact; only the dashboard key is dead."
+    },
+    {
+      "id": "t-1p-rate",
+      "title": "Let the 1Password CLI rate limit clear",
+      "project": "hermes-agent",
+      "status": "open",
+      "priority": "normal",
+      "due": "",
+      "notes": "The CLI is rate limited, so the DPAPI cache cannot be refreshed from the vault. The cached values still serve."
+    },
+    {
+      "id": "t-heretik-mcp",
+      "title": "Fix the HERETIK MCP route",
+      "project": "heretik",
+      "status": "open",
+      "priority": "normal",
+      "due": "",
+      "notes": "http://127.0.0.1:8080/mcp answers 404 while the health service is up. It injects a fatal-looking error into every Codex handshake."
+    },
+    {
+      "id": "t-tess-venv",
+      "title": "Fix the TESSERACT project venv",
+      "project": "TESSERACT",
+      "status": "open",
+      "priority": "normal",
+      "due": "",
+      "notes": "The project-local test environment has no fastapi, which causes 21 collection errors. Pre-existing, and it hides real failures."
+    },
+    {
+      "id": "t-chatgpt-quota",
+      "title": "ChatGPT worker quota resets",
+      "project": "hermes-agent",
+      "status": "active",
+      "priority": "low",
+      "due": "2026-10-27",
+      "notes": "The Plus worker quota reports 'try again at Oct 27th'. The integration itself is proven - it served nonces, wrote code and completed a file task."
+    },
+    {
+      "id": "t-faraday-publish",
+      "title": "Publish the faraday identity rewrite",
+      "project": "faraday",
+      "status": "active",
+      "priority": "high",
+      "due": "",
+      "notes": "reality-engine carries 85 local-identity commits. The rewrite is correct and the history-preserving rewriter is proven; the publish is in flight."
+    },
+    {
+      "id": "t-audit-final",
+      "title": "Rerun the authoritative all-branch audit",
+      "project": "hermes-agent",
+      "status": "open",
+      "priority": "high",
+      "due": "",
+      "notes": "Must wait for faraday to land. The audit self-test also needs a stable controlled offender now that QHYSICS has been fixed."
+    },
+    {
+      "id": "t-krysys-history",
+      "title": "Scrub the retired KRYSYS credentials from history",
+      "project": "krysys-shop",
+      "status": "open",
+      "priority": "normal",
+      "due": "",
+      "notes": "The defaults were removed from the working copy but remain in the history and in server.js.premonetary.bak. Rotate first, then scrub."
+    },
+    {
+      "id": "t-ibm-trial",
+      "title": "Land the IBM 30-day trial gains before it expires",
+      "project": "throne-intelligence",
+      "status": "open",
+      "priority": "normal",
+      "due": "2026-11-10",
+      "notes": "Local, permanent outputs only - catalogues, glossaries, deduplicated data. No long-term cloud dependency."
+    },
+    {
+      "id": "t-quants",
+      "title": "Keep the estate clean - no regressions",
+      "project": "hermes-agent",
+      "status": "active",
+      "priority": "normal",
+      "due": "",
+      "notes": "The house must stay green. 262 passed, 2 skipped, 0 failed, and the gate at 100.0/100 across 37 checks."
+    }
+  ]
+}

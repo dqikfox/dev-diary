@@ -1,0 +1,492 @@
+{
+  "generated": "2026-10-26",
+  "projects": [
+    {
+      "id": "TESSERACT",
+      "name": "TESSERACT",
+      "category": "control-plane",
+      "role": "The base of operations. One dashboard over every service, device, repository and model.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "fastapi",
+        "dashboard"
+      ],
+      "repo": "https://github.com/dqikfox/TESSERACT",
+      "path": "C:/Users/KING/Projects/TESSERACT",
+      "service": {
+        "port": 8705,
+        "health": "http://127.0.0.1:8705/health"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_tesseract.cmd",
+      "links": [
+        {
+          "label": "Dashboard",
+          "url": "http://127.0.0.1:8705/"
+        },
+        {
+          "label": "Providers",
+          "url": "http://127.0.0.1:8705/api/providers"
+        }
+      ]
+    },
+    {
+      "id": "nexus-core",
+      "name": "NEXUS CORE",
+      "category": "control-plane",
+      "role": "The primary brain: the indexed corpus, the RAG engine, and the retrieval that answers.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "rag",
+        "knowledge"
+      ],
+      "repo": "https://github.com/dqikfox/NEXUS.git",
+      "path": "E:/ultron-memory/nexus-core",
+      "service": {
+        "port": 8650,
+        "health": "http://127.0.0.1:8650/health"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_nexus.cmd",
+      "links": [
+        {
+          "label": "Health",
+          "url": "http://127.0.0.1:8650/health"
+        },
+        {
+          "label": "Search",
+          "url": "http://127.0.0.1:8650/api/search"
+        }
+      ]
+    },
+    {
+      "id": "evolution-stack",
+      "name": "EVOLUTION STACK",
+      "category": "control-plane",
+      "role": "The self-improvement loop: lineage, benchmark, snapshot, rollback, and the lesson ledger.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "cron",
+        "dgm"
+      ],
+      "repo": "https://github.com/dqikfox/evolution-stack.git",
+      "path": "E:/ultron-memory/evolution-stack",
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/self_evolution_daemon.cmd",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/dqikfox/evolution-stack"
+        }
+      ]
+    },
+    {
+      "id": "hermes-agent",
+      "name": "HERMES AGENT",
+      "category": "control-plane",
+      "role": "The agent runtime: 22 MCP servers, 197 tools, the provider router, the launcher contract.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "runtime"
+      ],
+      "path": "C:/Users/KING/AppData/Local/hermes",
+      "links": [
+        {
+          "label": "Scripts",
+          "url": "C:/Users/KING/AppData/Local/hermes/scripts"
+        },
+        {
+          "label": "Skills",
+          "url": "C:/Users/KING/AppData/Local/hermes/skills"
+        }
+      ]
+    },
+    {
+      "id": "krysys-shop",
+      "name": "KRYSYS",
+      "category": "revenue",
+      "role": "The crystal and geode shop. 373 SKUs, a real Stripe checkout, the closest thing to cash.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "stripe",
+        "pwa"
+      ],
+      "repo": "https://github.com/dqikfox/krysys-shop",
+      "path": "C:/Users/KING/Projects/krysys-shop",
+      "service": {
+        "port": 8500,
+        "health": "http://127.0.0.1:8500/api/health"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_krysys.cmd",
+      "links": [
+        {
+          "label": "Shop",
+          "url": "http://127.0.0.1:8500/"
+        },
+        {
+          "label": "Public",
+          "url": "https://throne-1.tail886dbb.ts.net:8443"
+        },
+        {
+          "label": "Health",
+          "url": "http://127.0.0.1:8500/api/health"
+        }
+      ]
+    },
+    {
+      "id": "krysys-catalog",
+      "name": "KRYSYS CATALOG",
+      "category": "revenue",
+      "role": "The master catalogue behind the shop: 83 elements, 273 crystals, 17 geodes.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "data"
+      ],
+      "repo": "https://github.com/dqikfox/krysys-catalog",
+      "path": "C:/Users/KING/Projects/krysys-catalog",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/dqikfox/krysys-catalog"
+        }
+      ]
+    },
+    {
+      "id": "lummings",
+      "name": "THE LUMMINGS",
+      "category": "product",
+      "role": "Little friends from a brighter tomorrow. The character canon, the locked artwork, the site.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "brand",
+        "site"
+      ],
+      "repo": "https://github.com/dqikfox/lummings",
+      "path": "C:/Users/KING/projects/lumming",
+      "links": [
+        {
+          "label": "Live site",
+          "url": "https://dqikfox.github.io/lummings/"
+        },
+        {
+          "label": "Character codex",
+          "url": "https://dqikfox.github.io/lummings/marketing/character-codex.html"
+        }
+      ],
+      "public_health": "https://dqikfox.github.io/lummings/",
+      "hosted": true
+    },
+    {
+      "id": "pixel",
+      "name": "PIXEL",
+      "category": "product",
+      "role": "The local-first character studio: make a character, talk with it, make things together.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "creative"
+      ],
+      "repo": "https://github.com/dqikfox/pixel",
+      "path": "C:/Users/KING/Projects/pixel",
+      "service": {
+        "port": 8520,
+        "health": "http://127.0.0.1:8520/api/state"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_pixel.cmd",
+      "links": [
+        {
+          "label": "Studio",
+          "url": "http://127.0.0.1:8520/"
+        }
+      ]
+    },
+    {
+      "id": "QHYSICS",
+      "name": "QHYSICS",
+      "category": "research",
+      "role": "The Unity physics work: the circuit simulation built for VR, and its real-asset history.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "unity",
+        "vr"
+      ],
+      "repo": "https://github.com/dqikfox/QHYSICS",
+      "path": "C:/Users/KING/Projects/QHYSICS",
+      "links": []
+    },
+    {
+      "id": "faraday",
+      "name": "FARADAY",
+      "category": "research",
+      "role": "Project Faraday: basic circuit design, explored in virtual reality.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "unity",
+        "vr"
+      ],
+      "repo": "https://github.com/dqikfox/faraday",
+      "path": "C:/Users/KING/Projects/faraday",
+      "links": []
+    },
+    {
+      "id": "pathwaytoscripture",
+      "name": "PATHWAY TO SCRIPTURE",
+      "category": "research",
+      "role": "The scripture corpus and the static site built on it.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "corpus",
+        "site"
+      ],
+      "repo": "https://github.com/dqikfox/pathwaytoscripture",
+      "path": "C:/Users/KING/Projects/pathwaytoscripture",
+      "links": [
+        {
+          "label": "Site",
+          "url": "https://dqikfox.github.io/pathwaytoscripture/"
+        }
+      ]
+    },
+    {
+      "id": "throne-intelligence",
+      "name": "THRONE INTELLIGENCE",
+      "category": "research",
+      "role": "The IBM watsonx integration layer: data governance, quality, lineage, catalogues.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "data"
+      ],
+      "repo": "https://github.com/dqikfox/throne-intelligence",
+      "path": "C:/Users/KING/Projects/throne-intelligence",
+      "links": []
+    },
+    {
+      "id": "QMS",
+      "name": "QMS",
+      "category": "tool",
+      "role": "Quick Message Studio: a Windows-local messenger with an ElevenLabs voice.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "voice"
+      ],
+      "path": "C:/Users/KING/Projects/QMS",
+      "links": []
+    },
+    {
+      "id": "vision",
+      "name": "VISION",
+      "category": "agents",
+      "role": "The accessibility operator: control a computer by natural language, with live voice.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "voice",
+        "accessibility"
+      ],
+      "repo": "https://github.com/dqikfox/vision",
+      "path": "C:/Users/KING/Projects/vision",
+      "links": []
+    },
+    {
+      "id": "ultron_agent",
+      "name": "ULTRON AGENT",
+      "category": "agents",
+      "role": "The agent platform: autonomous workflow execution, tool integration, memory.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "agent"
+      ],
+      "repo": "https://github.com/dqikfox/ultron_agent",
+      "path": "C:/Users/KING/Projects/ultron_agent",
+      "links": []
+    },
+    {
+      "id": "openclaw",
+      "name": "OPENCLAW",
+      "category": "agents",
+      "role": "The always-on assistant surface on the tailnet.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "assistant"
+      ],
+      "service": {
+        "port": 18789,
+        "health": "http://127.0.0.1:18789/health"
+      },
+      "links": []
+    },
+    {
+      "id": "heretik",
+      "name": "HERETIK",
+      "category": "agents",
+      "role": "The local model gateway. Its health service is up; its MCP route is not.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "llm"
+      ],
+      "path": "C:/Users/KING/Projects/heretic",
+      "service": {
+        "port": 8080,
+        "health": "http://127.0.0.1:8080/health"
+      },
+      "links": []
+    },
+    {
+      "id": "mainframe",
+      "name": "THRONE MAINFRAME",
+      "category": "infrastructure",
+      "role": "The THRONE agent toolkit and its production scripts.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "repo": "https://github.com/dqikfox/mainframe",
+      "path": "C:/Users/KING/Projects/mainframe",
+      "links": []
+    },
+    {
+      "id": "n8n",
+      "name": "N8N",
+      "category": "infrastructure",
+      "role": "The workflow engine, with its key held outside the repository.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "automation"
+      ],
+      "service": {
+        "port": 5678,
+        "health": "http://127.0.0.1:5678/healthz"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_n8n.cmd",
+      "links": []
+    },
+    {
+      "id": "discovery",
+      "name": "DISCOVERY",
+      "category": "infrastructure",
+      "role": "The network discovery service: what is out there, and what answers.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "network"
+      ],
+      "service": {
+        "port": 8660,
+        "health": "http://127.0.0.1:8660/"
+      },
+      "links": []
+    },
+    {
+      "id": "ollama-estate",
+      "name": "THE MODEL ESTATE",
+      "category": "ai",
+      "role": "Ollama on THRONE and on SHADOW, Ollama Cloud, and the routed provider rotation.",
+      "machines": [
+        "THRONE",
+        "SHADOW"
+      ],
+      "tags": [
+        "llm"
+      ],
+      "service": {
+        "port": 11434,
+        "health": "http://127.0.0.1:11434/api/tags"
+      },
+      "links": [
+        {
+          "label": "Local models",
+          "url": "http://127.0.0.1:11434/api/tags"
+        },
+        {
+          "label": "SHADOW models",
+          "url": "http://100.96.46.85:11434/api/tags"
+        }
+      ]
+    },
+    {
+      "id": "shadow",
+      "name": "SHADOW",
+      "category": "ai",
+      "role": "The mesh peer: an RTX A4500 with 20 GB, running Ollama and the gateway.",
+      "machines": [
+        "SHADOW"
+      ],
+      "tags": [
+        "peer",
+        "gpu"
+      ],
+      "links": [
+        {
+          "label": "Ollama",
+          "url": "http://100.96.46.85:11434"
+        },
+        {
+          "label": "Gateway",
+          "url": "http://100.96.46.85:8644/health"
+        }
+      ]
+    },
+    {
+      "id": "alchemy",
+      "name": "THE ALCHEMY STUDY",
+      "category": "study",
+      "role": "The corpus and the study log: Philalèthe, Ripley, Starkey, Zosimos.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "corpus"
+      ],
+      "path": "C:/Users/KING/Documents/alchemy",
+      "links": []
+    },
+    {
+      "id": "gold-atlas",
+      "name": "THE GOLD ATLAS",
+      "category": "study",
+      "role": "The gold work: the reference library and the catalogue behind it.",
+      "machines": [
+        "THRONE"
+      ],
+      "tags": [
+        "reference"
+      ],
+      "path": "C:/Users/KING/Documents/GOLD AU",
+      "links": []
+    }
+  ]
+}

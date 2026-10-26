@@ -1,0 +1,146 @@
+{
+  "groups": [
+    {
+      "group": "Service launchers",
+      "owner": "the launcher contract — one idempotent file per service",
+      "items": [
+        {
+          "name": "KRYSYS",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_krysys.cmd",
+          "machine": "THRONE",
+          "note": "Health is /api/health with the marker 'krysys'. /health answers with the SPA shell, so a 200 there is not health."
+        },
+        {
+          "name": "NEXUS",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_nexus.cmd",
+          "machine": "THRONE"
+        },
+        {
+          "name": "TESSERACT",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_tesseract.cmd",
+          "machine": "THRONE"
+        },
+        {
+          "name": "PIXEL",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_pixel.cmd",
+          "machine": "THRONE",
+          "note": "A single detached process, no supervisor, so its launcher probes /api/state before reclaiming the port."
+        },
+        {
+          "name": "N8N",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_n8n.cmd",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Evolution daemon",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/self_evolution_daemon.cmd",
+          "machine": "THRONE"
+        },
+        {
+          "name": "DEV DIARY",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/start_devdiary.cmd",
+          "machine": "THRONE",
+          "note": "Health is /api/health with the marker 'devdiary'."
+        }
+      ]
+    },
+    {
+      "group": "Registries",
+      "owner": "the estate's own source of truth",
+      "items": [
+        {
+          "name": "PORT_MAP",
+          "path": "E:/ultron-memory/infra/PORT_MAP.json",
+          "machine": "THRONE",
+          "note": "Read before starting any service. No two services may share a port."
+        },
+        {
+          "name": "SERVICES",
+          "path": "E:/ultron-memory/infra/SERVICES.json",
+          "machine": "THRONE",
+          "note": "Every health route is body-aware: JSON, not a 200 on any path."
+        },
+        {
+          "name": "Provider snapshot",
+          "path": "E:/ultron-memory/evolution-stack/state/providers.json",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Last known provider record",
+          "path": "E:/ultron-memory/evolution-stack/state/provider_last_known.json",
+          "machine": "THRONE",
+          "note": "Only a real provider response may update it. A vault outage cannot change a verdict."
+        },
+        {
+          "name": "Branch audit progress",
+          "path": "C:/Users/KING/AppData/Local/hermes/state/branch_audit.json",
+          "machine": "THRONE"
+        }
+      ]
+    },
+    {
+      "group": "Agent configuration",
+      "owner": "Hermes",
+      "items": [
+        {
+          "name": "MCP servers",
+          "path": "C:/Users/KING/AppData/Local/hermes/mcp/",
+          "machine": "THRONE",
+          "note": "22 configured, 18 live stdio servers, 197 tools. A stdio server must use the Hermes venv python."
+        },
+        {
+          "name": "Skills",
+          "path": "C:/Users/KING/AppData/Local/hermes/skills/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Provider router",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/provider_router.py",
+          "machine": "THRONE",
+          "note": "Real-request health, ordered routing, fallback, cost ledger, and the ChatGPT transport."
+        },
+        {
+          "name": "Git identity tools",
+          "path": "C:/Users/KING/AppData/Local/hermes/scripts/git_identity/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Codex configuration",
+          "path": "C:/Users/KING/.codex/config.toml",
+          "machine": "THRONE"
+        }
+      ]
+    },
+    {
+      "group": "Data",
+      "owner": "durable storage",
+      "items": [
+        {
+          "name": "NEXUS CORE",
+          "path": "E:/ultron-memory/nexus-core/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Evolution stack",
+          "path": "E:/ultron-memory/evolution-stack/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Infrastructure",
+          "path": "E:/ultron-memory/infra/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "Alchemy corpus",
+          "path": "C:/Users/KING/Documents/alchemy/",
+          "machine": "THRONE"
+        },
+        {
+          "name": "DEV DIARY data",
+          "path": "C:\\Users\\KING\\Projects\\dev diary\\data",
+          "machine": "THRONE"
+        }
+      ]
+    }
+  ]
+}

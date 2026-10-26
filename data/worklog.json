@@ -1,0 +1,68 @@
+{
+  "days": {
+    "2026-10-27": {
+      "summary": "Landed the Lummings codex fix, then found why faraday would not publish.",
+      "work": [
+        {
+          "project": "lummings",
+          "title": "Merged PR #5 - the codex now paints Lumo ruby red and Nori blue, and the subtitle is readable",
+          "status": "done",
+          "notes": "Found by rendering the page and looking at it. The character variables carry the locked-artwork palette; the gradient clip and the 4px shadow now belong to the headline alone. Pixel sampling confirmed ED4054 on the avatar and the tag."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Proved the ChatGPT Plus worker through the Codex CLI, then through the central router",
+          "status": "done",
+          "notes": "gpt-6-astra served fresh nonces exactly, wrote a 386-byte fib.py that passed every behavioural case, and completed a real file task in 34.6s. Its worker quota is exhausted until 27 October, so the Lummings review ran through Claude, Grok and the local GPU instead."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Rewrote the branch auditor after finding it reported every branch clean",
+          "status": "done",
+          "notes": "The jq query failed with 'unexpected token', and the non-zero exit was read as an empty hit list. API errors are now first-class errors, and the auditor must prove it can find a known offender before it may certify a clean result."
+        },
+        {
+          "project": "nexus-core",
+          "title": "Stopped the retrieval injecting notes that do not match the question",
+          "status": "done",
+          "notes": "RAG-on answered 3 of 5 nonces; RAG-off answered 5 of 5. A measured-relevance floor of 0.03 took the live rate to 8 of 8, and the regression suite passes 8 of 8 with no skips."
+        },
+        {
+          "project": "faraday",
+          "title": "Found why the faraday push wanted to upload 1,177 MB",
+          "status": "done",
+          "notes": "The repository's commits are GPG-signed. filter-branch cannot re-sign, so it drops the signature and every SHA changes - the rewritten history shares no commit with the original, git's negotiation has nothing to work with, and the push carries the whole repository. main never had a local identity at all; only reality-engine did, with 85."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Wrote a rewriter that keeps the history connected",
+          "status": "done",
+          "notes": "It reuses the original commit object for anything whose metadata did not change. 188 commits reused, 85 re-created, main left untouched, and the merge-base exists. The pack fell from 1,177 MB to 128 MB."
+        },
+        {
+          "project": "dev-diary",
+          "title": "Started DEV DIARY - the project, work and estate register",
+          "status": "active",
+          "notes": "A first-open menu of TODO, DIARY, Calendar, Projects, Secure, Configs and Network, with every project carrying its links, its launcher and the machine it lives on."
+        }
+      ],
+      "deadlines": [
+        {
+          "title": "ChatGPT worker quota resets",
+          "due": "2026-10-27",
+          "state": "open"
+        },
+        {
+          "title": "IBM 30-day trial expires",
+          "due": "2026-11-10",
+          "state": "open"
+        },
+        {
+          "title": "Connect the Stripe bank account",
+          "due": "2026-10-29",
+          "state": "open"
+        }
+      ]
+    }
+  }
+}
