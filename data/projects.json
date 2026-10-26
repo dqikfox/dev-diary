@@ -478,15 +478,36 @@
       "id": "gold-atlas",
       "name": "THE GOLD ATLAS",
       "category": "study",
-      "role": "The gold work: the reference library and the catalogue behind it.",
+      "role": "The GOLD AU evidence atlas. A read-only map of 7,495 official gold records with the research pins over them. Public on the tailnet funnel.",
       "machines": [
         "THRONE"
       ],
       "tags": [
-        "reference"
+        "map",
+        "public",
+        "reference",
+        "tailscale-funnel"
       ],
       "path": "C:/Users/KING/Documents/GOLD AU",
-      "links": []
+      "links": [
+        {
+          "label": "The map (public)",
+          "url": "https://throne-1.tail886dbb.ts.net/"
+        },
+        {
+          "label": "The map (local)",
+          "url": "http://127.0.0.1:8767/app/"
+        },
+        {
+          "label": "Quick tunnel",
+          "url": "https://spot-glasgow-yard-industries.trycloudflare.com/"
+        }
+      ],
+      "service": {
+        "port": 8767,
+        "health": "http://127.0.0.1:8767/app/"
+      },
+      "launcher": "C:/Users/KING/AppData/Local/hermes/scripts/start_goldatlas.cmd"
     }
   ]
 }
