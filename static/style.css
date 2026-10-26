@@ -72,8 +72,11 @@ a:hover { text-decoration: underline; }
 .menu-grid {
   display: grid; gap: 16px; flex: 1;
   grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
-  grid-auto-rows: 1fr;
-  align-content: stretch;
+  /* a fixed row height, and the whole block centred in what is left.
+     Letting the rows stretch to fill a tall screen leaves a dead gap
+     between the description and the count, and reads as a mistake. */
+  grid-auto-rows: 196px;
+  align-content: center;
 }
 
 .mcard {
