@@ -592,7 +592,17 @@ async function refreshVitals() {
   loadCounts();
   setInterval(loadCounts, 60000);
   refreshVitals();
-  // a hash opens that panel directly, so a link can point at one screen
-  const h = (location.hash || "").replace("#", "");
+  // a hash opens that panel directly, so a link can point at one screen.
+  //
+  // The hash is parsed TOLERANTLY: both "#projects" and "#/projects" are
+  // accepted. The old code stripped only the "#", so a URL written the
+  // obvious way - #/projects - left "/projects" as the panel name, matched
+  // nothing, and silently dropped the reader on the menu instead.
+  const h = (location.hash || "").replace(/^#\/?/, "");
   if (h && TITLES[h]) enter(h);
+  // and a hash change routes, so a link that lands mid-session works
+  addEventListener("hashchange", () => {
+    const p = (location.hash || "").replace(/^#\/?/, "");
+    if (p && TITLES[p] && S.panel !== p) enter(p);
+  });
 })();
