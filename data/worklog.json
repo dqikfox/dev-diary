@@ -1,7 +1,7 @@
 {
   "days": {
     "2026-10-27": {
-      "summary": "Landed the Lummings codex fix, then found why faraday would not publish.",
+      "summary": "Proved the account clean across every branch, and put the GOLD AU Evidence Atlas on a public URL that serves the right application.",
       "work": [
         {
           "project": "lummings",
@@ -44,6 +44,36 @@
           "title": "Started DEV DIARY - the project, work and estate register",
           "status": "active",
           "notes": "A first-open menu of TODO, DIARY, Calendar, Projects, Secure, Configs and Network, with every project carrying its links, its launcher and the machine it lives on."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Put the OpenAI Platform key in the vault",
+          "status": "done",
+          "notes": "The key authenticates - GET /v1/models returns 200 - but the project has no credit, so a completion returns 429 credit_balance_exhausted. A valid credential that cannot pay is blocked, not failed. The item is 'OpenAI Platform Key - Codex project'; the older 'OpenAI Project Key' was left untouched. The CLI on this build needs --title for the title, or it reads a positional as a field and reports 'cannot add a field with no value'."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Audited the whole account in one local pass per repository",
+          "status": "done",
+          "notes": "68 repositories, 352 branches, zero unlinked local identities, zero errors. The API auditor pages through every commit of every branch and was still running after 20 minutes with 34 of 68 done; a treeless bare clone and one git log --all does the same work in 12 seconds for the 173-branch repository against 884. The API is kept for the proof, a per-repository control and a positive control - a planted local identity is scanned first, so a clean result means something. Three defects came out of it: an unlinked author is not an offence on its own, a branch name has to be URL-ENCODED before it goes into an API path, and the two auditors had drifted into two different identity sets."
+        },
+        {
+          "project": "gold-atlas",
+          "title": "Gave the atlas a JSON health route so the estate gate can read it",
+          "status": "done",
+          "notes": "The atlas served its page as its health URL, and a route that answers HTML is a static file being served, not a service reporting itself ready - so the gate called a perfectly serving map DOWN. It answers /health with JSON now, and the body still carries the marker so the body-aware probe is unchanged."
+        },
+        {
+          "project": "dev-diary",
+          "title": "Made a link land on the panel it names",
+          "status": "done",
+          "notes": "The hash parser stripped only the '#', so a URL written the obvious way - #/projects - left '/projects' as the panel name, matched nothing, and dropped the reader on the menu with no indication that anything had gone wrong. Both forms are accepted now, and a hash change routes."
+        },
+        {
+          "project": "hermes-agent",
+          "title": "Brought the register back in line with the estate",
+          "status": "done",
+          "notes": "The TODO list still had HERETIK, Faraday and the 1Password rate limit open days after they were finished, and no entry at all for the two things done today. Every closed item now carries what happened and how it was verified, so a later reader learns the method and not just the outcome."
         }
       ],
       "deadlines": [
